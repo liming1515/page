@@ -1,0 +1,92 @@
+.parent{
+  li:hover  .children{
+    display: block;
+  }
+  .children{
+    display: none;
+  }
+}
+
+label{
+  span{
+    display: none;
+    margin: 3px 3px 3px 4px;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #000;
+  }
+  input:checked{
+    // display: none;
+  }
+  input:checked + span{
+    display: block;
+  }
+}
+.foc:focus{
+  position: absolute;
+  border: 5px solid red;
+}
+.tel + span{
+  // display: none;
+  width: 100px;
+}
+.tel:invalid + span{
+  // display: block;
+  color: red;
+}
+.sanjiao{
+
+  width: 0px;
+  height: 0px;
+  border: 20px solid red;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #fff;
+}
+.click:active{
+  background-color: red;
+}
+.or{
+  position: relative;
+  width: 100px;
+}
+.or::before{
+  display: block;
+  content: '';
+  width: 1px;
+  height: 21px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+.haha{
+  // display: block
+  position: relative;
+}
+.haha::before{
+  display: block;
+  content: '';
+  width: 100px;
+  height: 1px;
+  background-color: red;
+  position: absolute;
+  top: 13px;
+  left: 100px;
+}
+.choose{
+  // 在我的区域内有多少个被标记sss的
+  counter-reset: sss;
+}
+.choose input:checked{
+  // 设置自己被标记sss
+  counter-increment: sss;
+}
+.ssss::before{
+  // 计算在我之前的元素有多少个被标记sss
+  content: counter(sss);
+  // display: block;
+}
+.count::before{
+  content: counter(sss);
+}

@@ -1,0 +1,76 @@
+.parent li:hover .children {
+  display: block;
+}
+.parent .children {
+  display: none;
+}
+label span {
+  display: none;
+  margin: 3px 3px 3px 4px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #000;
+}
+label input:checked + span {
+  display: block;
+}
+.foc:focus {
+  position: absolute;
+  border: 5px solid red;
+}
+.tel + span {
+  width: 100px;
+}
+.tel:invalid + span {
+  color: red;
+}
+.sanjiao {
+  width: 0px;
+  height: 0px;
+  border: 20px solid red;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #fff;
+}
+.click:active {
+  background-color: red;
+}
+.or {
+  position: relative;
+  width: 100px;
+}
+.or::before {
+  display: block;
+  content: '';
+  width: 1px;
+  height: 21px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+.haha {
+  position: relative;
+}
+.haha::before {
+  display: block;
+  content: '';
+  width: 100px;
+  height: 1px;
+  background-color: red;
+  position: absolute;
+  top: 13px;
+  left: 100px;
+}
+.choose {
+  counter-reset: sss;
+}
+.choose input:checked {
+  counter-increment: sss;
+}
+.ssss::before {
+  content: counter(sss);
+}
+.count::before {
+  content: counter(sss);
+}
